@@ -1,8 +1,8 @@
 import os, sys, time
 import pyautogui as bot
 
-def exit_status(): # not working, have to use exception handling 
-    if sys.argv[2] == "":
+def exit_status(firstParam): # not working, have to use exception handling 
+    if firstParam == "":
         quit()
 
 def start_timer():
@@ -27,6 +27,6 @@ message = param[0]
 count = param[1]
 wait = param[2]
 
-exit_status()
+exit_status(param[0])
 start_timer()
 send_message()
