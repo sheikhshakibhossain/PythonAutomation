@@ -8,7 +8,7 @@ while(i>0):
     time.sleep(1)
     i -= 1
 
-babeName = "Sauda"
+babeName = "my queen"
 mesg = "I love you " + babeName
 wait = 5 # seconds
 count = 5
