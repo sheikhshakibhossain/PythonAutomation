@@ -19,10 +19,21 @@ def send_love_mesg(count, wait, babeName):
         time.sleep(int(wait))
     print("Done...")
 
+def send_love_mesg(): # overloading method
+    mesg = "I love you " + babeName
+    i = 0
+    while (i < int(count)):
+        bot.typewrite(mesg)
+        bot.press("enter")
+        i += 1
+        time.sleep(int(time_stamp))
+    print("Done...")
+
 
 babeName = input("Babe name: ")
 count = input("Number of message: ")
 time_stamp = input("Seconds between messages: ")
 
 start_timer()
-send_love_mesg(count, time_stamp, babeName)
+# send_love_mesg(count, time_stamp, babeName) # Test: OK
+send_love_mesg() # Test: OK
