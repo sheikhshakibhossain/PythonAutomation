@@ -1,22 +1,28 @@
 import os, time
 import pyautogui as bot
 
-i = 5
-while(i>0):
-    print("Starting attack in: " + str(i))
-    time.sleep(1)
-    os.system('clear')
-    i -= 1
+def start_timer():
+    i = 5
+    while(i>0):
+        print("Starting attack in: " + str(i))
+        time.sleep(1)
+        os.system('clear')
+        i -= 1
 
-babeName = "my queen"
-mesg = "I love you " + babeName
-wait = 3 # seconds
-count = 1
+def send_love_mesg(count, wait, babeName):
+    mesg = "I love you " + babeName
+    i = 0
+    while (i < int(count)):
+        bot.typewrite(mesg)
+        bot.press("enter")
+        i += 1
+        time.sleep(int(wait))
+    print("Done...")
 
-i = 0
-while (i < count):
-    bot.typewrite(mesg)
-    bot.press("enter")
-    i += 1
-    time.sleep(wait)
-print("Done...")
+
+babeName = input("Babe name: ")
+count = input("Number of message: ")
+time_stamp = input("Seconds between messages: ")
+
+start_timer()
+send_love_mesg(count, time_stamp, babeName)
