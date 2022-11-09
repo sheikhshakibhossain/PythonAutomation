@@ -8,12 +8,14 @@ def exit_status(firstParam): # not working, have to use exception handling
 def start_timer():
     i = 5
     while(i>0):
+        os.system('clear')
         print("Starting attack in " + str(i))
         time.sleep(1)
-        os.system('clear')
         i -= 1
+    os.system('clear')
 
 def send_message():
+    print("running your attack ...")
     i = 0
     while(i < int(count)):
         bot.typewrite(message)
