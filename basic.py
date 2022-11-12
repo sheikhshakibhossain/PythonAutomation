@@ -13,3 +13,6 @@ for i in arr:
 
 for i in arr:
     print(i)
+
+for i in range(5):
+    print("Hello " + str(i))
