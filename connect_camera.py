@@ -13,6 +13,9 @@ while True:
     # Capture frame-by-frame
     ret, frame = cap.read()
 
+    # Flip the frame horizontally
+    frame = cv2.flip(frame, 1)
+
     # Display the resulting frame
     cv2.imshow('frame', frame)
 
